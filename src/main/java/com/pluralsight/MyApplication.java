@@ -21,6 +21,12 @@ public class MyApplication {
             System.out.println("You are not old enough to vote.");
         }
 
+        printMessage(name, age);
+
         scanner.close();
+    }
+
+    public static void printMessage(String name, int age) {
+        System.out.println("Hello, " + name + "! You are " + age + " years old.");
     }
 }
