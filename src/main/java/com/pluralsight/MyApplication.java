@@ -13,16 +13,26 @@ public class MyApplication {
         printVotingEligibility(age);
         System.out.println("=============================================");
         printMessage(name, age);
+        System.out.println("=============================================");
+        printWelcomeMessage(name);
 
         scanner.close();
     }
 
-    public static String getName(Scanner scanner){
+    public static void printWelcomeMessage(String name) {
+        if (name.equalsIgnoreCase("Alice")) {
+            System.out.println("Welcome, Alice!");
+        } else {
+            System.out.println("Hello, stranger!");
+        }
+    }
+
+    public static String getName(Scanner scanner) {
         System.out.println("Enter your name: ");
         return scanner.nextLine();
     }
 
-    public static int getAge(Scanner scanner){
+    public static int getAge(Scanner scanner) {
         System.out.println("Enter your age: ");
         return scanner.nextInt();
     }
