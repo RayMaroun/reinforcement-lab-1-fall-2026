@@ -21,8 +21,17 @@ public class MyApplication {
         double number = getNumber(scanner);
         double squareRoot = calculateSquareRoot(number);
         System.out.printf("The square root of %.2f is %.2f%n", number, squareRoot);
+        System.out.println("=============================================");
+        int firstNumber = getFirstNumber(scanner);
+        int secondNumber = getSecondNumber(scanner);
+        boolean firstIsBigger = isGreaterThan(firstNumber, secondNumber);
+        System.out.println(firstNumber + " is greater than " + secondNumber + ": " + firstIsBigger);
 
         scanner.close();
+    }
+
+    public static boolean isGreaterThan(int firstNumber, int secondNumber) {
+        return firstNumber > secondNumber;
     }
 
     public static double calculateSquareRoot(double number) {
@@ -32,6 +41,16 @@ public class MyApplication {
     public static double getNumber(Scanner scanner) {
         System.out.println("Enter a number: ");
         return scanner.nextDouble();
+    }
+
+    public static int getFirstNumber(Scanner scanner) {
+        System.out.println("Enter the first number: ");
+        return scanner.nextInt();
+    }
+
+    public static int getSecondNumber(Scanner scanner) {
+        System.out.println("Enter the second number: ");
+        return scanner.nextInt();
     }
 
 
@@ -52,11 +71,11 @@ public class MyApplication {
     }*/
 
     public static void printWelcomeMessage(String name) {
-       String message = switch(name){
-           case "Alice" -> "Welcome, Alice!";
-           case "Bob" -> "Hey Bob, do you want to grab a drink?";
-           default -> "Hello, stranger!";
-       };
+        String message = switch (name) {
+            case "Alice" -> "Welcome, Alice!";
+            case "Bob" -> "Hey Bob, do you want to grab a drink?";
+            default -> "Hello, stranger!";
+        };
         System.out.println(message);
     }
 
