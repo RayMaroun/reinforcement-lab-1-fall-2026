@@ -43,12 +43,21 @@ public class MyApplication {
         }
     }
 
-    public static void printWelcomeMessage(String name) {
+    /*public static void printWelcomeMessage(String name) {
         if (name.equalsIgnoreCase("Alice")) {
             System.out.println("Welcome, Alice!");
         } else {
             System.out.println("Hello, stranger!");
         }
+    }*/
+
+    public static void printWelcomeMessage(String name) {
+       String message = switch(name){
+           case "Alice" -> "Welcome, Alice!";
+           case "Bob" -> "Hey Bob, do you want to grab a drink?";
+           default -> "Hello, stranger!";
+       };
+        System.out.println(message);
     }
 
     public static String getName(Scanner scanner) {
