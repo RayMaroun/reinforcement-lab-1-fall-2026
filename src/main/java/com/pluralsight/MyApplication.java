@@ -30,9 +30,19 @@ public class MyApplication {
         String welcomeMessage = name.equalsIgnoreCase("Lara") ? "You are not welcome, " + name + "!" : "Welcome, " + name;
 
         System.out.println(welcomeMessage);
-
+        System.out.println("=============================================");
+        System.out.println("The larger number is: " + getMax(firstNumber, secondNumber));
+        System.out.println("The smaller number is: " + getMin(firstNumber, secondNumber));
 
         scanner.close();
+    }
+
+    public static int getMax(int firstNumber, int secondNumber) {
+        return Math.max(firstNumber, secondNumber);
+    }
+
+    public static int getMin(int firstNumber, int secondNumber) {
+        return Math.min(firstNumber, secondNumber);
     }
 
     public static boolean isGreaterThan(int firstNumber, int secondNumber) {
