@@ -17,9 +17,23 @@ public class MyApplication {
         printWelcomeMessage(name);
         System.out.println("=============================================");
         printDrinkingEligibility(name, age);
+        System.out.println("=============================================");
+        double number = getNumber(scanner);
+        double squareRoot = calculateSquareRoot(number);
+        System.out.printf("The square root of %.2f is %.2f%n", number, squareRoot);
 
         scanner.close();
     }
+
+    public static double calculateSquareRoot(double number) {
+        return Math.sqrt(number);
+    }
+
+    public static double getNumber(Scanner scanner) {
+        System.out.println("Enter a number: ");
+        return scanner.nextDouble();
+    }
+
 
     public static void printDrinkingEligibility(String name, int age) {
         if (name.equalsIgnoreCase("Bob") && age >= 21) {
