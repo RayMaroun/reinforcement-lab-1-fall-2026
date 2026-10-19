@@ -5,25 +5,39 @@ import java.util.Scanner;
 public class MyApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String name = getName(scanner);
+        int age = getAge(scanner);
 
+        printNameAndAge(name, age);
+        System.out.println("=============================================");
+        printVotingEligibility(age);
+        System.out.println("=============================================");
+        printMessage(name, age);
+
+        scanner.close();
+    }
+
+    public static String getName(Scanner scanner){
         System.out.println("Enter your name: ");
-        String name = scanner.nextLine();
+        return scanner.nextLine();
+    }
 
+    public static int getAge(Scanner scanner){
         System.out.println("Enter your age: ");
-        int age = scanner.nextInt();
+        return scanner.nextInt();
+    }
 
+    public static void printNameAndAge(String name, int age) {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
+    }
 
+    public static void printVotingEligibility(int age) {
         if (age >= 18) {
             System.out.println("You are old enough to vote.");
         } else {
             System.out.println("You are not old enough to vote.");
         }
-
-        printMessage(name, age);
-
-        scanner.close();
     }
 
     public static void printMessage(String name, int age) {
