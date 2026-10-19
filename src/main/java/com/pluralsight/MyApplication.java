@@ -26,6 +26,11 @@ public class MyApplication {
         int secondNumber = getSecondNumber(scanner);
         boolean firstIsBigger = isGreaterThan(firstNumber, secondNumber);
         System.out.println(firstNumber + " is greater than " + secondNumber + ": " + firstIsBigger);
+        System.out.println("=============================================");
+        String welcomeMessage = name.equalsIgnoreCase("Lara") ? "You are not welcome, " + name + "!" : "Welcome, " + name;
+
+        System.out.println(welcomeMessage);
+
 
         scanner.close();
     }
