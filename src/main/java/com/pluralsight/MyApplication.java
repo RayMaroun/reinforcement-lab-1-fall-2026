@@ -15,8 +15,18 @@ public class MyApplication {
         printMessage(name, age);
         System.out.println("=============================================");
         printWelcomeMessage(name);
+        System.out.println("=============================================");
+        printDrinkingEligibility(name, age);
 
         scanner.close();
+    }
+
+    public static void printDrinkingEligibility(String name, int age) {
+        if (name.equalsIgnoreCase("Bob") && age >= 21) {
+            System.out.println("You are old enough to drink.");
+        } else {
+            System.out.println("You are not old enough to drink.");
+        }
     }
 
     public static void printWelcomeMessage(String name) {
